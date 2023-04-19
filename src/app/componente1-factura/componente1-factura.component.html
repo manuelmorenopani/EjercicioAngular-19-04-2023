@@ -1,0 +1,32 @@
+<label for="marca">Idpedido: </label>
+<input type="number" name="marca" [(ngModel)]="factura.idfactura"><br>
+<label for="color">Idcliente: </label>
+<input id="number" id="color" name="color" [(ngModel)]="factura.idcliente"><br>
+<label for="velocidad">IVA: </label>
+<input type="number"id="piñones" name="piñones"[(ngModel)]="factura.totalfactura"><br>
+<label for="platos">importetotal: </label>
+<input type="number"id="piñones" name="piñones"[(ngModel)]="factura.iva"><br>
+
+
+<input type="submit" value="Añadir" (click)="anadir()">
+<input type="submit" value="Eliminar" (click)="eliminar()">
+<input type="submit" value="Buscar" (click)="buscar()">
+<input type="submit" value="modificar" (click)="modificar()">
+<input type="number"id="piñones" name="piñones"[(ngModel)]="ids"><br>
+
+
+<p>Lista de productos</p>
+ <table>
+    <tr>
+        <td>idFactura</td>
+        <td>idCliente</td>
+        <td>Total Factura</td>
+        <td>IVA</td>
+    </tr>
+    <tr *ngFor="let factura of facturas">
+        <td>{{factura.idfactura}}</td>
+        <td>{{factura.idcliente}}</td>
+        <td>{{factura.totalfactura}}</td>
+        <td>{{factura.iva}}</td>
+    </tr>
+</table>
